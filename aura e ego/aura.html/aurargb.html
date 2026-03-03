@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura RGB</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .texto-aura {
+            font-size: 15vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            
+            /* Efeito RGB */
+            background: linear-gradient(
+                to right, 
+                #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000
+            );
+            background-size: 200% auto; /* Faz o gradiente ser maior que o texto para ele "correr" */
+            -webkit-background-clip: text; /* Recorta o fundo no formato do texto (Chrome/Safari) */
+            -webkit-text-fill-color: transparent; /* Deixa o preenchimento original transparente */
+            
+            /* Animação */
+            animation: animaRGB 3s linear infinite;
+            
+            /* Um brilho suave para destacar no fundo preto */
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+        }
+
+        /* Movimentação das cores */
+        @keyframes animaRGB {
+            to {
+                background-position: 200% center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="texto-aura">Aura</div>
+
+</body>
+</html>
