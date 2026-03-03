@@ -1,0 +1,30 @@
+<body>
+<div class="aura-container" style="position: relative; display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; overflow: hidden;">
+
+    <svg id="svg-raios" viewBox="0 0 600 600" style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+        <defs>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        
+        <path id="raio-path" d="" stroke="white" stroke-width="4" fill="none" filter="url(#glow)" />
+    </svg>
+
+    <h1 class="texto-aura" style="position: relative; z-index: 2; font-size: 15vw; font-family: sans-serif;">
+        AURA
+    </h1>
+
+</div>
+
+<button id="btn-start" style="position: fixed; top: 20px; z-index: 100; cursor: pointer; padding: 10px 20px;">
+    ATIVAR TEMPESTADE ⚡
+</button>
+
+<audio id="audio-trovao" loop>
+    <source src="https://www.soundjay.com/nature/sounds/thunder-rain-01.mp3" type="audio/mpeg">
+</audio>
